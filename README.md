@@ -83,4 +83,4 @@ fanout类型的exchange，那么routing key就不重要了。因为凡是绑定�
 ##### topic交换器
 ![](./README/scp3.png)
 
-更具路由KEY 进行批评 一个消息可能进入多个MQ 或在1个MQ
+更具路由KEY 进行匹配 一个消息可能进入多个MQ 或在1个MQ
