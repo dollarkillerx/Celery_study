@@ -1,11 +1,11 @@
 # Celery Study
 Celery Python实现分布式[队列]服务 支持即时任务&定时任务
 
-## 多语言
+## 多语言  不是太友好
 可以通过暴露 HTTP 的方式进行，任务交互以及其它语言的集成开发。
-- [Node.js](https://github.com/mher/node-celery) 已停止维护     【非官方】
+- [Node.js](https://github.com/mher/node-celery) 【非官方】已停止维护
 - [Php](https://github.com/gjedeer/celery-php)                【非官方】
-- [GO](https://github.com/gocelery/gocelery)                  【非官方】 
+- [GO](https://github.com/gocelery/gocelery)   【非官方】  支持版本 < Celery 4.0             
 
 ## 5大金刚
 - Task
@@ -84,3 +84,8 @@ fanout类型的exchange，那么routing key就不重要了。因为凡是绑定�
 ![](./README/scp3.png)
 
 更具路由KEY 进行匹配 一个消息可能进入多个MQ 或在1个MQ
+
+
+### 总结celery
+- 跨语言 不友好  官方没有提供其他语言的SDK  其他语言的社区提供的包 缺少功能
+ 
