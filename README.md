@@ -2,7 +2,6 @@
 Celery Python实现分布式[队列]服务 支持即时任务&定时任务
 
 ## 多语言  不是太友好
-可以通过暴露 HTTP 的方式进行，任务交互以及其它语言的集成开发。
 - [Node.js](https://github.com/mher/node-celery) 【非官方】已停止维护
 - [Php](https://github.com/gjedeer/celery-php)                【非官方】
 - [GO](https://github.com/gocelery/gocelery)   【非官方】  支持版本 < Celery 4.0             
