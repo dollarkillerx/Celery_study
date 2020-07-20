@@ -88,3 +88,17 @@ fanout类型的exchange，那么routing key就不重要了。因为凡是绑定�
 ### 总结celery
 - 跨语言 不友好  官方没有提供其他语言的SDK  其他语言的社区提供的包 缺少功能
  
+### 其他
+- 并发 `celery -A proj worker -P eventlet -c 1000`
+- 异常
+    - 当worker 发送异常时(系统不会重试) 需要手动捕获 并重试
+    ```python
+    @app.task(bind=True)
+    def send_twitter_status(self, oauth, tweet):
+        try:
+            twitter = Twitter(oauth)
+            twitter.update_status(tweet)
+        except (Twitter.FailWhaleError, Twitter.LoginError) as exc: # 捕获异常
+            raise self.retry(exc=exc,max_retries=5)  # 重试, max_retries最大重试次数
+    ```
+
